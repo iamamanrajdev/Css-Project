@@ -24,7 +24,6 @@ body {
     color: var(--light-color);
     line-height: 1.6;
     background-color: var(--dark-color);
-    /* The main page background is now set by the video */
 }
 
 .container {
@@ -52,12 +51,11 @@ section {
 }
 
 /* --- SECTION BACKGROUNDS --- */
-.features-section, .routine-section, .classes-section, .pricing-section, .story-section {
+.features-section, .routine-section, .classes-section, .pricing-section, .story-section, .enquiry-section {
     background-color: rgba(17, 17, 17, 0.9);
     border-top: 1px solid var(--light-dark-color);
-    border-bottom: 1px solid var(--light-dark-color);
-    background-size: cover; /* Added for better image scaling */
-    background-blend-mode: overlay; /* Added to blend the color with the image */
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 .features-section {
     border-top: none;
@@ -65,7 +63,6 @@ section {
     background-position: center;
 }
 .story-section {
-    border-bottom: none;
     background-image: url(./exercise-weights-iron-dumbbell-with-extra-plates.jpg);
 }
 .routine-section{
@@ -80,11 +77,15 @@ section {
     background-image: url(./6725081.jpg);
     background-position:bottom;
 }
+.enquiry-section {
+    border-bottom: 1px solid var(--light-dark-color);
+    background-image: url(./3d-gym-equipment.jpg);
+    background-position: center;
+}
 footer {
     background: var(--dark-color);
     padding: 4rem 0 2rem;
     text-align: center;
-    border-top: 1px solid var(--light-dark-color);
     background-image: url(./3d-gym-equipment.jpg);
     background-position: right;
     background-size: cover;
@@ -102,6 +103,7 @@ footer {
     border: 2px solid var(--primary-color);
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 .cta-button {
     background-color: var(--primary-color);
@@ -232,7 +234,7 @@ header nav a:hover { color: var(--primary-color); }
     font-size: 1.5rem;
 }
 
-/* --- ROUTINE SECTION (UPDATED) --- */
+/* --- ROUTINE SECTION --- */
 .workout-days {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -263,7 +265,7 @@ header nav a:hover { color: var(--primary-color); }
 .day-card ul { list-style: none; flex-grow: 1; }
 .day-card ul li {
     display: flex;
-    justify-content: space-between; /* I fixed the typo here */
+    justify-content: space-between;
     padding: 0.8rem;
     margin-bottom: 5px;
     background: rgba(0,0,0,0.6);
@@ -271,35 +273,25 @@ header nav a:hover { color: var(--primary-color); }
 }
 .day-card strong { color: var(--light-color); }
 .day-card span { color: var(--gray-color); font-weight: 500; }
-
-/* Background images for each card */
-.push-day { background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./push.png'); }
-.pull-day { background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./pull.png'); }
-.leg-day { background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./leg.png'); }
-.upper-body-day { background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./upper.png'); }
-.lower-body-day { background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./lower.png'); }
-
+.push-day { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./push.png'); }
+.pull-day { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./pull.png'); }
+.leg-day { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./leg.png'); }
+.upper-body-day { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./upper.png'); }
+.lower-body-day { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./lower.png'); }
 .rest-day {
     background-color: rgba(40, 167, 69, 0.2);
     border-color: #28a745;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./rest.png');
 }
 .rest-day h3 { color: #06f43e; }
-
-
-/* ===== MODIFICATION STARTS HERE ===== */
 .rest-day ul li {
-    background: none; /* Keep background transparent */
-    justify-content: center; /* Center the text since there's only one item */
+    background: none;
+    justify-content: center;
 }
-
-/* This new rule targets ONLY the span inside the rest-day card */
 .rest-day ul li span {
-    color: var(--light-color); /* Makes the text white */
-    font-weight: 700; /* Makes the text bold */
+    color: var(--light-color);
+    font-weight: 700;
 }
-/* ===== MODIFICATION ENDS HERE ===== */
-
 
 /* --- CLASSES SECTION --- */
 .classes-grid {
@@ -388,12 +380,10 @@ header nav a:hover { color: var(--primary-color); }
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    
 }
 .story-image-card {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
 .story-image-card:hover {
     transform: scale(1.05);
@@ -405,7 +395,6 @@ header nav a:hover { color: var(--primary-color); }
     object-fit: cover;
     border: 4px solid var(--light-dark-color);
     border-radius: 10px;
-   
 }
 .image-caption {
     margin-top: 1rem;
@@ -413,7 +402,6 @@ header nav a:hover { color: var(--primary-color); }
     font-size: 1.2rem;
     color: var(--gray-color);
     font-family: var(--font-heading);
-  
 }
 .story-text { flex: 1; }
 .story-text h3 { font-size: 2.5rem; margin-bottom: 1.5rem; }
@@ -428,7 +416,54 @@ header nav a:hover { color: var(--primary-color); }
     font-weight: 500;
 }
 
-/* --- FOOTER (UPDATED) --- */
+/* ===== NEW ENQUIRY SECTION STYLES ===== */
+.enquiry-section {
+    text-align: center;
+}
+.enquiry-section > .container > p {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    color: var(--gray-color);
+}
+.enquiry-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.enquiry-form input,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    color: var(--light-color);
+    background-color: var(--light-dark-color);
+    border: 2px solid var(--gray-color);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+    color: var(--gray-color);
+}
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+.enquiry-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+.enquiry-form .cta-button {
+    align-self: center;
+    width: auto;
+}
+/* ======================================= */
+
+/* --- FOOTER --- */
 .footer-content h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -441,24 +476,21 @@ header nav a:hover { color: var(--primary-color); }
     margin: 0 auto 2rem;
     color: #fff;
 }
-
-/* Social Icons Styling */
 .social-icons {
-    margin-bottom: 2rem; /* Space between icons and footer bottom */
+    margin-bottom: 2rem;
 }
 .social-icons a {
-    display: inline-block; /* Allows for transform property to work */
+    display: inline-block;
     color: var(--light-color);
-    font-size: 1.8rem; /* Larger icons */
-    margin: 0 1rem; /* More space between icons */
+    font-size: 1.8rem;
+    margin: 0 1rem;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 .social-icons a:hover {
     color: var(--primary-color);
-    transform: translateY(-5px); /* Adds a "lift" effect on hover */
+    transform: translateY(-5px);
 }
-
 .footer-bottom {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -493,6 +525,18 @@ header nav a:hover { color: var(--primary-color); }
         font-size: 3rem;
     }
     header .cta-button, header nav {
-        display: none;
+        display: none; /* Hides menu for a simple mobile view */
+    }
+    .workout-days {
+        grid-template-columns: 1fr;
+    }
+    .story-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .story-image-card img {
+        width: 100%;
+        max-width: 300px;
+        height: auto; /* Maintain aspect ratio */
     }
 }

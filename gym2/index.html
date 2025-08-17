@@ -11,22 +11,36 @@
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">Grind<span>Zone</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#routine">Routine</a></li>
-                    <li><a href="#classes">Classes</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#story">Success Story</a></li>
-                    <li><a href="#enquiry">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#pricing" class="cta-button">Join Now</a>
-        </div>
-    </header>
+  <!-- HEADER  FOR CSS-ONLY MOBILE MENU  -->
+<header>
+    <div class="container">
+        <a href="#" class="logo">Grind<span>Zone</span></a>
+        
+        <!-- This is the invisible checkbox that will control the menu's state -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        
+        <!-- This label is styled as the hamburger button and is linked to the checkbox -->
+        <label for="nav-toggle" class="nav-toggle-label">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <!-- The main navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#routine">Routine</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#story">Success Story</a></li>
+                <li><a href="#enquiry">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- The desktop "Join Now" button -->
+        <a href="#pricing" class="cta-button header-cta">Join Now</a>
+    </div>
+</header>
+<!-- =================================================== -->
 
     <main>
         <!-- Hero Section -->
@@ -256,34 +270,43 @@
 
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>Grind<span>Zone</span> The Gym</h3>
-                <p>Your journey to strength starts here. Don't wait for tomorrow, start today.</p>
-                
-                <div class="social-icons">
-                    <!-- GitHub Icon Link -->
-                    <a href="https://github.com/iamamanrajdev" target="_blank" aria-label="GitHub Profile">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <!-- LinkedIn Icon Link -->
-                    <a href="https://www.linkedin.com/in/aman-raj-0a58482b3/" target="_blank" aria-label="LinkedIn Profile">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <!-- Email Icon Link -->
-                    <a href="mailto:iamamanraj.dev@gmail.com" aria-label="Send an Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+   <!-- ===== FOOTER Design TO MATCH THE ORIGINAL STYLE ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <h3>Grind<span>Zone</span> The Gym</h3>
+            <p>Your journey to strength starts here. Don't wait for tomorrow, start today.</p>
+            
+            <!-- Address and Contact Info Section -->
+            <div class="footer-contact-info">
+                <div class="contact-item">
+                    <p><i class="fas fa-map-marker-alt"></i>  Malti Apartment Chhota-Bariyarpur, Motihari, Pin-845401</p>
                 </div>
-
+                <div class="contact-item">
+                    <p><i class="fas fa-phone"></i> (91) 83403743**</p>
+                </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 GrindZone Gym. Made with ❤️ by Aman Raj.</p>
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://github.com/iamamanrajdev" target="_blank" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aman-raj-0a58482b3/" target="_blank" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:iamamanraj.dev@gmail.com" aria-label="Send an Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 GrindZone Gym. Made with ❤️ by Aman Raj.</p>
+        </div>
+    </div>
+</footer>
+
 
 </body>
 </html>

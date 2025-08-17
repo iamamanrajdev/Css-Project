@@ -86,10 +86,10 @@ Update the footer social icons in index.html with your personal links:
 
 ✍️ Author
 
-Created with ❤️ by Aman Raj
-	•	🌐 GitHub:https://github.com/iamamanrajdev
-	•	💼 LinkedIn: :https://www.linkedin.com/in/aman-raj-0a58482b3/
+Created with ❤️ by Aman Raj  
 
+- 🌐 [GitHub](https://github.com/iamamanrajdev)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/aman-raj-0a58482b3/)  
 ⸻
 📄 License
 

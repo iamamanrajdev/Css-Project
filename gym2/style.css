@@ -56,9 +56,41 @@ section {
     background-color: rgba(17, 17, 17, 0.9);
     border-top: 1px solid var(--light-dark-color);
     border-bottom: 1px solid var(--light-dark-color);
+    background-size: cover; /* Added for better image scaling */
+    background-blend-mode: overlay; /* Added to blend the color with the image */
 }
-.features-section { border-top: none; }
-.story-section { border-bottom: none; }
+.features-section {
+    border-top: none;
+    background-image: url(./modern-urban-gym.jpg);
+    background-position: center;
+}
+.story-section {
+    border-bottom: none;
+    background-image: url(./exercise-weights-iron-dumbbell-with-extra-plates.jpg);
+}
+.routine-section{
+    background-image: url(./view-gym-room-training-sports.jpg);
+    background-position: center;
+}
+.classes-section{
+    background-image: url(./weight-lifting-concept-with-dumbbell.jpg);
+    background-position: center;
+}
+.pricing-section{
+    background-image: url(./6725081.jpg);
+    background-position:bottom;
+}
+footer {
+    background: var(--dark-color);
+    padding: 4rem 0 2rem;
+    text-align: center;
+    border-top: 1px solid var(--light-dark-color);
+    background-image: url(./3d-gym-equipment.jpg);
+    background-position: right;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
 
 /* --- BUTTONS --- */
 .cta-button, .cta-button-outline {
@@ -231,7 +263,7 @@ header nav a:hover { color: var(--primary-color); }
 .day-card ul { list-style: none; flex-grow: 1; }
 .day-card ul li {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* I fixed the typo here */
     padding: 0.8rem;
     margin-bottom: 5px;
     background: rgba(0,0,0,0.6);
@@ -249,15 +281,27 @@ header nav a:hover { color: var(--primary-color); }
 
 .rest-day {
     background-color: rgba(40, 167, 69, 0.2);
-    border-color: #28a745; 
-  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./rest.png'); 
+    border-color: #28a745;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('./rest.png');
 }
-.rest-day h3 { color: #28a745; }
-.rest-day ul li { background: none; }
+.rest-day h3 { color: #06f43e; }
+
+
+/* ===== MODIFICATION STARTS HERE ===== */
+.rest-day ul li {
+    background: none; /* Keep background transparent */
+    justify-content: center; /* Center the text since there's only one item */
+}
+
+/* This new rule targets ONLY the span inside the rest-day card */
+.rest-day ul li span {
+    color: var(--light-color); /* Makes the text white */
+    font-weight: 700; /* Makes the text bold */
+}
+/* ===== MODIFICATION ENDS HERE ===== */
 
 
 /* --- CLASSES SECTION --- */
-/* (Styles remain the same) */
 .classes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -287,7 +331,6 @@ header nav a:hover { color: var(--primary-color); }
 .class-info h3 { font-size: 2rem; }
 
 /* --- PRICING SECTION --- */
-/* (Styles remain the same) */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -335,7 +378,6 @@ header nav a:hover { color: var(--primary-color); }
 .pricing-plan ul li .fa-times { color: #dc3545; }
 
 /* --- STORY SECTION --- */
-/* (Styles remain the same) */
 .story-content {
     display: flex;
     align-items: center;
@@ -346,21 +388,24 @@ header nav a:hover { color: var(--primary-color); }
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    
 }
 .story-image-card {
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 .story-image-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 30px rgba(255, 208, 0, 0.4);
 }
 .story-image-card img {
-    width: 280px; 
+    width: 280px;
     height: 380px;
-    object-fit: cover; 
+    object-fit: cover;
     border: 4px solid var(--light-dark-color);
     border-radius: 10px;
+   
 }
 .image-caption {
     margin-top: 1rem;
@@ -368,6 +413,7 @@ header nav a:hover { color: var(--primary-color); }
     font-size: 1.2rem;
     color: var(--gray-color);
     font-family: var(--font-heading);
+  
 }
 .story-text { flex: 1; }
 .story-text h3 { font-size: 2.5rem; margin-bottom: 1.5rem; }
@@ -383,45 +429,70 @@ header nav a:hover { color: var(--primary-color); }
 }
 
 /* --- FOOTER (UPDATED) --- */
-footer {
-    background: var(--dark-color);
-    padding: 4rem 0 2rem;
-    text-align: center;
-    border-top: 1px solid var(--light-dark-color);
+.footer-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
-.footer-content h3 { font-size: 2rem; margin-bottom: 1rem; }
-.footer-content h3 span { color: var(--primary-color); }
-.footer-content p { max-width: 500px; margin: 0 auto 1.5rem; color: var(--gray-color); }
-.social-icons a { color: var(--light-color); font-size: 1.5rem; margin: 0 0.75rem; transition: color 0.3s; }
-.social-icons a:hover { color: var(--primary-color); }
-
-/* New styles for GitHub/LinkedIn links */
-.footer-links {
-    margin: 2rem 0;
-}
-.footer-links a {
-    color: var(--gray-color);
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 1rem;
-    transition: color 0.3s;
-}
-.footer-links a:hover {
+.footer-content h3 span {
     color: var(--primary-color);
 }
+.footer-content p {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    color: #fff;
+}
 
-.footer-bottom { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--light-dark-color); font-size: 0.9rem; }
+/* Social Icons Styling */
+.social-icons {
+    margin-bottom: 2rem; /* Space between icons and footer bottom */
+}
+.social-icons a {
+    display: inline-block; /* Allows for transform property to work */
+    color: var(--light-color);
+    font-size: 1.8rem; /* Larger icons */
+    margin: 0 1rem; /* More space between icons */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px); /* Adds a "lift" effect on hover */
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--light-dark-color);
+    font-size: 0.9rem;
+}
+
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 992px) {
-    .classes-grid, .pricing-grid, .trainers-grid { grid-template-columns: 1fr; }
-    .pricing-plan { margin-bottom: 2rem; }
-    .pricing-plan.popular { transform: scale(1); }
-    .story-content { flex-direction: column; }
-    .story-images { margin-bottom: 2rem; }
+    .classes-grid, .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-plan {
+        margin-bottom: 2rem;
+    }
+    .pricing-plan.popular {
+        transform: scale(1);
+    }
+    .story-content {
+        flex-direction: column;
+    }
+    .story-images {
+        margin-bottom: 2rem;
+    }
 }
 @media (max-width: 768px) {
-    h2 { font-size: 2rem; }
-    .hero-content h1 { font-size: 3rem; }
-    header .cta-button, header nav { display: none; }
+    h2 {
+        font-size: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    header .cta-button, header nav {
+        display: none;
+    }
 }
